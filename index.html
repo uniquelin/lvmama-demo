@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>【驴妈妈旅游】_景点门票_自由行_跟团游_国内游_出境游_酒店_机票</title>
+    <meta name="keywords" content="自由行,景点,跟团游,自驾游,机票,酒店">
+    <meta name="description" content="驴妈妈旅游网-中国新型的B2C旅游电子商务网站，为旅游者提供景区门票、自由行、度假酒店、机票、国内游、出境游等一站式旅游服务，《自在游天下,就找驴妈妈!》">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/jquery-3.3.1.js"></script>
+<!--    获取用户当前的城市位置-->
+    <script src="http://pv.sohu.com/cityjson"></script>
+
+    <script src="js/template-web.js"></script>
+    <script src="js/myFun.js"></script>
+</head>
+<body>
+<!--    顶部工具条-->
+    <div class="top-tool">
+        <div class="tool-wrap clearfix">
+                <div class="city-box fl">
+                    <div class="city-up">
+                        <i class="city-icon fl"></i>
+                        <b class="city">厦门</b>
+                        <a href="javascript:void(0);" class="city-btn">[切换]</a>
+                    </div>
+                    <div class="city-down">
+                        <p>可选城市列表</p>
+                    </div>
+                </div>
+                <div class="login fl">
+                    <a href="javascript:void(0);">请登录</a><a href="javascript:void(0);">免费注册</a>
+                </div>
+                <ul class="tool-link fr">
+                    <li class="menu">
+                        <a href="javascript:void(0);" class="link">我的驴妈妈<i class="icon-arrow"></i></a>
+                        <div class="menu-down">
+                            <a href="javascript:void(0);">我的订单</a>
+                            <a href="javascript:void(0);">我的驴镑</a>
+                            <a href="javascript:void(0);">我的优惠券</a>
+                            <a href="javascript:void(0);">我的礼品卡</a>
+                        </div>
+                    </li>
+                    <li><a href="javascript:void(0);" class="link">驴镑商城</a></li>
+                    <li><a href="javascript:void(0);" class="link">品牌会员</a></li>
+                    <li><a href="javascript:void(0);" class="link">帮助</a></li>
+                    <li class="menu border-l">
+                        <a href="javascript:void(0);" class="link link-icon-wx"><i class="icon icon-wx"></i></a>
+                        <div class="menu-down">
+                            <img class="wx-img" src="images/weixin.jpg" alt="">
+                        </div>
+                    </li>
+                    <li class="menu">
+                        <a href="javascript:void(0);" class="link link-icon-xcx"><i class="icon icon-xcx"></i></a>
+                        <div class="menu-down">
+                            <img class="xcx-img" src="images/xiaochengxu.png" alt="">
+                        </div>
+                    </li>
+                    <li><a href="javascript:void(0);" class="link link-icon-wb"><i class="icon icon-wb"></i></a></li>
+                    <li><a href="javascript:void(0);" class="link link-icon-mobile"><i class="icon icon-mobile"></i>手机版</a></li>
+                    <li class="menu border-l link-call">
+                        <a href="javascript:void(0);" class="link"><i class="icon icon-phone"></i>国内:1010-6060<i class="icon-arrow"></i></a>
+                        <div class="menu-down">
+                            <img src="images/telephone.png" alt="">
+                        </div>
+                    </li>
+                    <li><a href="javascript:void(0);" class="link">在线客服</a></li>
+                    <li class="menu">
+                        <a href="javascript:void(0);" class="link">合作中心<i class="icon-arrow"></i></a>
+                        <div class="menu-down">
+                            <a href="javascript:void(0);">供应商合作</a>
+                            <a href="javascript:void(0);">EBooking</a>
+                            <a href="javascript:void(0);">广告合作</a>
+                            <a href="javascript:void(0);">驴妈妈联盟</a>
+                            <a href="javascript:void(0);">品牌合作</a>
+                            <a href="javascript:void(0);">网络媒体合作</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+    </div>
+<!--    头部广告栏-->
+    <div class="ad">
+        <div class="ad-box">
+            <div class="ad-main">
+                <div class="ad-close"></div>
+                <a href="javascript:void(0);">
+                    <img src="images/small-ad.jpg" alt="" style="width: 1200px;height: 60px;">
+                </a>
+            </div>
+        </div>
+    </div>
+<!--    头部搜索栏-->
+    <div class="header">
+        <div class="header-search">
+            <div class="logo fl">
+                <a href="javascript:void(0);">驴妈妈旅游网</a>
+            </div>
+            <a href="javascript:void(0);" class="header-tip fr"></a>
+            <div class="search fr">
+                <div class="search-city">
+                    <b>厦门</b>
+                    <span>出发</span>
+                    <i class="icon-arrow"></i>
+                </div>
+                <div class="search-box">
+                    <div class="search-type fl">
+                        <b>全部旅游</b>
+                        <i class="icon-arrow"></i>
+                    </div>
+                    <div class="search-type-box fl">
+                        <form class="search-form">
+                            <input type="text" class="search-text fl" value="请输入目的地、主题、或关键词">
+                        </form>
+                    </div>
+                    <span class="search-btn fl">
+                        <i></i>
+                        <em>搜索</em>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--    头部导航栏-->
+    <div class="nav-bar">
+        <div class="nav-box">
+            <ul>
+                <li><a href="javascript:void(0);">首页</a></li>
+                <li class="nav-menu">
+                    <a href="javascript:void(0);">出境游<i class="icon-arrow"></i></a>
+                    <div class="down-nav">
+                        <p>
+                            <a href="javascript:void(0);">出境首页</a>
+                            <a href="javascript:void(0);">邮轮</a>
+                            <a href="javascript:void(0);">签证</a>
+                            <a href="javascript:void(0);">境外玩乐</a>
+                            <a href="javascript:void(0);">WIFI/电话卡</a>
+                            <a href="javascript:void(0);">定制游</a>
+                        </p>
+                        <span></span>
+                    </div>
+                </li>
+                <li class="nav-menu">
+                    <a href="javascript:void(0);">国内游<i class="icon-arrow"></i></a>
+                    <div class="down-nav">
+                        <p>
+                            <a href="javascript:void(0);">国内首页</a>
+                            <a href="javascript:void(0);">机酒自由行</a>
+                            <a href="javascript:void(0);">定制游</a>
+                        </p>
+                        <span></span>
+                    </div>
+                </li>
+                <li class="nav-menu">
+                    <a href="javascript:void(0);">周边游<i class="icon-arrow"></i></a>
+                    <div class="down-nav">
+                        <p>
+                            <a href="javascript:void(0);">周边游首页</a>
+                            <a href="javascript:void(0);">酒店+景点</a>
+                            <a href="javascript:void(0);">周边跟团游</a>
+                            <a href="javascript:void(0);">定制</a>
+                        </p>
+                        <span></span>
+                    </div>
+                </li>
+                <li class="nav-menu">
+                    <a href="javascript:void(0);">景点门票<i class="icon-arrow"></i></a>
+                    <div class="down-nav">
+                        <p>
+                            <a href="javascript:void(0);">国内门票</a>
+                            <a href="javascript:void(0);">境外门票</a>
+                        </p>
+                        <span></span>
+                    </div>
+                </li>
+                <li class="nav-menu">
+                    <a href="javascript:void(0);">酒店<i class="icon-arrow"></i></a>
+                    <div class="down-nav">
+                        <p>
+                            <a href="javascript:void(0);">国内酒店</a>
+                            <a href="javascript:void(0);">境外酒店</a>
+                        </p>
+                        <span></span>
+                    </div>
+                </li>
+                <li class="nav-menu">
+                    <a href="javascript:void(0);">定制游<i class="icon-arrow"></i></a>
+                    <div class="down-nav">
+                        <p>
+                            <a href="javascript:void(0);">个人定制游</a>
+                            <a href="javascript:void(0);">企业定制游</a>
+                        </p>
+                        <span></span>
+                    </div>
+                </li>
+                <li class="nav-menu">
+                    <a href="javascript:void(0);">自驾游<i class="icon-arrow"></i></a>
+                    <div class="down-nav">
+                        <p>
+                            <a href="javascript:void(0);">自驾首页</a>
+                            <a href="javascript:void(0);">定制游</a>
+                        </p>
+                        <span></span>
+                    </div>
+                </li>
+                <li><a href="javascript:void(0);">亲子游</a></li>
+                <li class="nav-menu">
+                    <a href="javascript:void(0);">邮轮<i class="icon-arrow"></i></a>
+                    <div class="down-nav">
+                        <p>
+                            <a href="javascript:void(0);">邮轮首页</a>
+                            <a href="javascript:void(0);">日本航线</a>
+                            <a href="javascript:void(0);">海外航线</a>
+                        </p>
+                        <span></span>
+                    </div>
+                </li>
+                <li class="nav-menu">
+                    <a href="javascript:void(0);">机票<i class="icon-arrow"></i></a>
+                    <div class="down-nav">
+                        <p>
+                            <a href="javascript:void(0);">国内机票</a>
+                            <a href="javascript:void(0);">国际·港澳台机票</a>
+                        </p>
+                        <span></span>
+                    </div>
+                </li>
+                <li><a href="javascript:void(0);">火车票</a></li>
+                <li><a href="javascript:void(0);">特卖会</a></li>
+                <li><a href="javascript:void(0);">金融</a></li>
+                <li class="nav-menu">
+                    <a href="javascript:void(0);">旅游攻略<i class="icon-arrow"></i></a>
+                    <div class="down-nav">
+                        <p>
+                            <a href="javascript:void(0);">目的地</a>
+                            <a href="javascript:void(0);">游记</a>
+                            <a href="javascript:void(0);">问答</a>
+                        </p>
+                        <span></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+<!--    轮播图-->
+    <div class="banner">
+        <ul class="banner-box">
+            <li><a href="javascript:void(0);"><img src=images/banner4.jpg alt=""></a></li>
+            <li><a href="javascript:void(0);"><img src=images/banner5.jpg alt=""></a></li>
+            <li><a href="javascript:void(0);"><img src=images/banner6.jpg alt=""></a></li>
+            <li><a href="javascript:void(0);"><img src=images/banner7.jpg alt=""></a></li>
+            <li><a href="javascript:void(0);"><img src=images/banner8.jpg alt=""></a></li>
+            <li><a href="javascript:void(0);"><img src=images/banner3.jpg alt=""></a></li>
+        </ul>
+        <ol class="banner-tap"></ol>
+        <div class="banner-tab">
+            <ul class="tab fl">
+                <li class="active">景点门票</li>
+                <li>跟团游</li>
+                <li>自由行</li>
+                <li>当地游</li>
+                <li>酒店</li>
+                <li>机票</li>
+                <li>火车票</li>
+                <li>邮轮&签证</li>
+            </ul>
+            <div class="tab-list fl">
+                <div class="list">
+                    <ul class="list-nav">
+                        <li>景点门票<i></i></li>
+                        <li>酒店+景点<i></i></li>
+                    </ul>
+                    <ul class="list-search">
+                        <li><input type="text" class="search-text" value="请输入目的地、主题或景区"></li>
+                        <li><input type="text" class="search-text" value="请输入目的地、主题、或关键词"></li>
+                    </ul>
+                    <div class="list-btn">
+                        <span class="search-btn">搜索</span>
+                    </div>
+                    <dl class="list-hot">
+                        <dt>热门景点</dt>
+                        <dd>
+                            <a href="javascript:void(0);" class="hot">横店影视城</a>
+                            <a href="javascript:void(0);">航空小镇温泉水世界</a>
+                            <a href="javascript:void(0);">杭州野生动物世界</a>
+                            <a href="javascript:void(0);" class="hot">杭州长乔极地海洋公园</a>
+                            <a href="javascript:void(0);">杭州云曼温泉</a>
+                            <a href="javascript:void(0);">宁波方特东方神画</a>
+                        </dd>
+                    </dl>
+                </div>
+                <div class="list">2</div>
+                <div class="list">3</div>
+                <div class="list">4</div>
+                <div class="list">5</div>
+                <div class="list">6</div>
+                <div class="list">7</div>
+                <div class="list">8</div>
+            </div>
+        </div>
+    </div>
+<!--    秒杀区-->
+    <div class="section seckill">
+        <div class="seckill-box">
+            <div class="seckill-top">
+                <ul class="seckill-tab">
+                    <li class="active">
+                        今日必抢
+                        <i></i>
+                    </li>
+                    <li>
+                        品质优选
+                        <i></i>
+                    </li>
+                    <li>
+                        亲子/自驾
+                        <i></i>
+                    </li>
+                </ul>
+                <div class="seckill-ad">
+                    <a href="javascript:void(0);">
+                        <img src="images/ad.jpg" alt="" style="width: 120px;height: 30px;">
+                    </a>
+                </div>
+            </div>
+            <div class="seckill-bottom images-bar">
+                <ul>
+                    <li>
+                        <a href="javascript:void(0);">
+                            <img src="images/seckill-img1.jpg" alt="" style="width: 222px;height: 150px;">
+                            <div class="seckill-info">
+                                <p class="title">
+                                    <i class="title-tag">景区门票<span class="title-tag-line">|</span></i>
+                                    横店影视城
+                                </p>
+                                <div class="price">
+                                    <dfn><i>¥</i>9.9</dfn>起
+                                    <span class="buy-btn">立即抢购</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">
+                            <img src="images/seckill-img2.jpg" alt="" style="width: 222px;height: 150px;">
+                            <div class="seckill-info">
+                                <p class="title">
+                                    <i class="title-tag">景区门票<span class="title-tag-line">|</span></i>
+                                    杭州宋城景区
+                                </p>
+                                <div class="price">
+                                    <dfn><i>¥</i>99</dfn>起
+                                    <span class="buy-btn">立即抢购</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">
+                            <img src="images/seckill-img3.jpg" alt="" style="width: 222px;height: 150px;">
+                            <div class="seckill-info">
+                                <p class="title">
+                                    <i class="title-tag">酒店套餐<span class="title-tag-line">|</span></i>
+                                    横店2天1晚【下单立减200，独家特惠套餐】住1晚四星影视主题酒店百老汇大厦+3景点＋梦幻谷（含水世界）＋送用车券
+                                </p>
+                                <div class="price">
+                                    <dfn><i>¥</i>1210</dfn>起
+                                    <span class="buy-btn">立即抢购</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">
+                            <img src="images/seckill-img4.jpg" alt="" style="width: 222px;height: 150px;">
+                            <div class="seckill-info">
+                                <p class="title">
+                                    <i class="title-tag">自由行<span class="title-tag-line">|</span></i>
+                                    【超级预售】【超级会员优惠立减】日本大阪5日自由行(错峰※樱花预售，吉祥航空上海直飞，午去午回，舒适航班体验，托运行李额每人2件每件23公斤★可私人订制酒店、民宿、当地游等，随心搭配，助您玩转关西，详询客服★★★★★)
+                                </p>
+                                <div class="price">
+                                    <dfn><i>¥</i>2399</dfn>起
+                                    <span class="buy-btn">立即抢购</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">
+                            <img src="images/seckill-img5.jpg" alt="" style="width: 222px;height: 150px;">
+                            <div class="seckill-info">
+                                <p class="title">
+                                    <i class="title-tag">跟团游<span class="title-tag-line">|</span></i>
+                                    【普陀山专线直通车，迎春大促】2日爆款特卖游([住海边精装民宿]口碑优质产品，价有所值，高性价比，含普陀山大门票，往返大巴，轮渡等，游精华景点，纯玩，无购物，无强制性消费)
+                                </p>
+                                <div class="price">
+                                    <dfn><i>¥</i>375</dfn>起
+                                    <span class="buy-btn">立即抢购</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <div class="section-box">
+            <img src="images/section2.png" alt="">
+        </div>
+    </div>
+    <div class="section">
+        <div class="section-box">
+            <img src="images/section3.png" alt="">
+        </div>
+    </div>
+    <div class="section">
+        <div class="section-box">
+            <img src="images/section4.png" alt="">
+        </div>
+    </div>
+    <div class="section">
+        <div class="section-box">
+            <img src="images/section5.png" alt="">
+        </div>
+    </div>
+    <div class="section section6">
+        <div class="section-box">
+            <img src="images/section6.png" alt="">
+        </div>
+    </div>
+    <div class="section7">
+        <img src="images/partners.png" alt="">
+    </div>
+<!--    楼层菜单-->
+    <div class="nav-left">
+        <ul>
+            <li>
+                <h3>特卖</h3>
+            </li>
+            <li>
+                <h3>出境</h3>
+            </li>
+            <li>
+                <h3>国内</h3>
+            </li>
+            <li>
+                <h3>周边</h3>
+            </li>
+            <li>
+                <h3>门票</h3>
+            </li>
+            <li>
+                <h3>酒店</h3>
+            </li>
+        </ul>
+    </div>
+<!--    页尾区-->
+    <div class="footer">
+        <div class="footer-top">
+            <img src="images/footertop.png" alt="">
+        </div>
+        <div class="footer-middle">
+            <img src="images/footermiddle.png" alt="">
+        </div>
+        <div class="footer-bottom">
+            <img src="images/footerbottom.png" alt="">
+        </div>
+    </div>
+    <script id="cities" type="text/html">
+        <% for(let i = 0; i < cities.length; i ++) {%>
+        <dl class="city-down-list clearfix">
+            <dt class="fl"><%=cities[i].area%></dt>
+            <dd class="fl">
+                <% for(let j = 0; j < cities[i].list.length; j ++) {%>
+                <a href="javascript:void(0);"><%=cities[i].list[j]%></a>
+                <% } %>
+            </dd>
+        </dl>
+        <% } %>
+    </script>
+    <script src="js/index.js"></script>
+</body>
+</html>

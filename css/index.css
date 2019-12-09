@@ -1,0 +1,906 @@
+@charset "UTF-8";
+/* 版心样式 */
+/* 全局类样式*/
+body {
+  margin: 0;
+  background: #fff;
+  font: 12px/22px "Helvetica Neue","Arial","PingFang SC","Microsoft YaHei","SimSun","sans-serif";
+  min-width: 1200px;
+  color: #333;
+}
+
+.images-bar {
+  width: 100%;
+  margin: 20px 0 0 20px;
+}
+
+/* 工具类样式*/
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.clearfix:after {
+  display: block;
+  content: "";
+  height: 0;
+  visibility: hidden;
+  clear: both;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+.border-l {
+  border-left: 1px solid #ccc;
+}
+
+/* 顶部工具条样式*/
+.icon-arrow {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  position: absolute;
+  right: 8px;
+  top: 13px;
+  border: 3px solid transparent;
+  border-top-color: #9f9f9f;
+}
+
+.link {
+  display: inline-block;
+  height: 30px;
+  line-height: 30px;
+  margin-top: -8px;
+  overflow: hidden;
+  padding: 0 6px;
+  position: relative;
+}
+
+.top-tool {
+  width: 100%;
+  background-color: #fafafa;
+}
+.top-tool .tool-wrap {
+  width: 1200px;
+  margin: 0 auto;
+  height: 30px;
+  color: #6c6c6c;
+  font-size: 12px;
+}
+.top-tool .tool-wrap a {
+  color: #6c6c6c;
+}
+.top-tool .tool-wrap a:hover {
+  color: #f60;
+}
+.city-box {
+  height: 30px;
+  line-height: 30px;
+  position: relative;
+}
+.city-box .city-up {
+  padding: 0 5px;
+  position: relative;
+  z-index: 9;
+}
+.city-box .city-up .city-icon {
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  margin: 7px 8px 0 0;
+  background: url("../images/icons.png") no-repeat 0 -70px;
+  vertical-align: middle;
+}
+.city-box .city-up b {
+  color: #666;
+}
+.city-box .city-down {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 29px;
+  width: 360px;
+  padding: 0 14px 10px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  z-index: 99;
+}
+.city-box .city-down p {
+  line-height: 16px;
+  color: #999;
+  padding: 10px 0 5px;
+}
+.city-down-list {
+  line-height: 20px;
+  padding: 2px 0;
+}
+.city-down-list dt {
+  width: 50px;
+  height: 20px;
+}
+.city-down-list dd {
+  width: 305px;
+}
+.city-down-list dd a {
+  white-space: nowrap;
+  margin-right: 7px;
+  color: #333;
+}
+.city-active .city-up {
+  padding: 0 4px;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  background-color: #fff;
+}
+.city-active .city-up .city-icon {
+  background: url("../images/icons.png") no-repeat -18px -70px;
+}
+.city-active .city-down {
+  display: block;
+}
+.login {
+  height: 30px;
+  line-height: 30px;
+  margin-left: 5px;
+  padding-right: 5px;
+}
+.login a {
+  padding: 0 4px;
+}
+.login a:nth-child(1) {
+  border-right: 1px solid #ccc;
+}
+.tool-link {
+  height: 30px;
+  line-height: 30px;
+}
+.tool-link .icon {
+  display: inline-block;
+  float: left;
+  width: 17px;
+  height: 17px;
+  margin: 7px 3px 0 0;
+  background: url("../images/icons.png") no-repeat;
+}
+.tool-link li {
+  float: left;
+  height: 14px;
+  line-height: 14px;
+  margin-top: 8px;
+}
+.menu {
+  position: relative;
+}
+.menu .link {
+  padding: 0 17px 0 10px;
+  z-index: 9;
+}
+.menu:hover .link {
+  position: relative;
+  left: -1px;
+  padding: 0 15px 0 10px;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  background: #fff;
+}
+.menu:hover .link .icon-arrow {
+  top: 10px;
+  right: 6px;
+  border-color: #fff #fff #9f9f9f;
+}
+.menu:hover .link-icon-wx {
+  padding: 0 1px 0 6px;
+}
+.menu:hover .link-icon-xcx {
+  padding: 0 1px 0 6px;
+}
+.menu:hover .menu-down {
+  display: block;
+}
+.menu:hover .menu-down a:hover {
+  background: #fafafa;
+}
+.tool-link .link .icon-wx {
+  background-position: -20px -90px;
+}
+.tool-link .link .icon-xcx {
+  background-position: -420px -320px;
+}
+.tool-link .link .icon-wb {
+  background-position: -20px -110px;
+}
+.tool-link .link .icon-mobile {
+  background-position: 0 -130px;
+}
+.tool-link .link .icon-phone {
+  background-position: 0 -150px;
+}
+.tool-link .link-icon-wx {
+  padding: 0 3px 0 6px;
+}
+.tool-link .link-icon-xcx {
+  padding: 0 3px 0 6px;
+}
+.tool-link .link-icon-wb {
+  padding: 0 1px 0 6px;
+}
+.tool-link .link-call .link:hover {
+  color: #6c6c6c;
+}
+.tool-link .link-call .menu-down {
+  left: initial;
+  right: 1px;
+}
+.tool-link .menu-down {
+  display: none;
+  position: absolute;
+  top: 21px;
+  left: -1px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  z-index: 99;
+}
+.tool-link .menu-down a {
+  display: block;
+  width: 75px;
+  height: 26px;
+  line-height: 26px;
+  padding-left: 10px;
+  overflow: hidden;
+}
+.tool-link .menu-down .wx-img {
+  padding: 5px 5px 6px 5px;
+}
+.tool-link .menu-down .xcx-img {
+  padding: 5px 5px 6px 5px;
+}
+
+/* 头部广告栏样式 */
+.ad .ad-box {
+  width: 1200px;
+  margin: 0 auto;
+  height: 0;
+  position: relative;
+}
+.ad .ad-box .ad-main {
+  display: none;
+  height: 60px;
+  position: relative;
+}
+.ad .ad-box .ad-main:before {
+  display: block;
+  content: "";
+  width: 50px;
+  height: 18px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: url("../images/lv_ads.png") no-repeat;
+}
+.ad .ad-box .ad-main .ad-close {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 15px;
+  height: 15px;
+  background-color: #fff;
+  background: url("../images/icons.png") no-repeat -100px -190px;
+  cursor: pointer;
+}
+
+/* 头部搜索栏样式 */
+.header {
+  height: 80px;
+}
+.header .header-search {
+  width: 1200px;
+  margin: 0 auto;
+}
+.header .header-search .logo {
+  margin-top: 5px;
+  background: url("../images/lv_logo.png") no-repeat;
+  overflow: hidden;
+}
+.header .header-search .logo a {
+  display: block;
+  width: 175px;
+  height: 57px;
+  text-indent: -999px;
+  position: relative;
+}
+.header .header-search .header-tip {
+  display: block;
+  width: 270px;
+  height: 50px;
+  margin-top: 20px;
+  background: url("../images/homeheadtip.png") no-repeat;
+}
+.search {
+  margin: 19px 32px 0 0;
+  position: relative;
+}
+.search .search-city {
+  position: absolute;
+  left: -140px;
+  width: 130px;
+  height: 36px;
+  border: 3px solid #f90;
+  background: #fff7ec;
+  cursor: pointer;
+}
+.search .search-city b {
+  display: inline-block;
+  font-weight: normal;
+  margin: 9px 5px 8px 12px;
+  font-size: 16px;
+  height: 20px;
+  line-height: 20px;
+  color: #444;
+  vertical-align: top;
+}
+.search .search-city span {
+  display: inline-block;
+  color: #bbbbbb;
+  font-size: 12px;
+  padding-top: 11px;
+  margin-right: 20px;
+  line-height: 18px;
+  vertical-align: top;
+}
+.search .search-city .icon-arrow {
+  background: url("../images/search-home.png") no-repeat -20px -20px;
+  border-top-color: transparent;
+  width: 10px;
+  height: 5px;
+}
+.search .search-box {
+  width: 517px;
+  height: 36px;
+  line-height: 36px;
+  border: 3px solid #f90;
+}
+.search .search-box .search-type {
+  width: 109px;
+  height: 36px;
+  background: #fff7ec;
+  border-right: 1px solid #f90;
+  position: relative;
+  padding-left: 10px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.search .search-box .search-type b {
+  display: inline-block;
+  font-size: 14px;
+  color: #f80;
+}
+.search .search-box .search-type .icon-arrow {
+  background: url("../images/search-home.png") no-repeat -20px -20px;
+  border-top-color: transparent;
+  width: 10px;
+  height: 5px;
+}
+.search .search-box .search-type-box {
+  width: 309px;
+  height: 100%;
+}
+.search .search-box .search-type-box .search-text {
+  width: 290px;
+  height: 20px;
+  line-height: 20px;
+  padding: 8px 10px;
+  border: none;
+  font-size: 14px;
+  color: #bbb;
+  outline: none;
+}
+.search .search-box .search-btn {
+  display: inline-block;
+  width: 99px;
+  height: 36px;
+  overflow: hidden;
+  background: #f90;
+  cursor: pointer;
+  text-align: center;
+}
+.search .search-box .search-btn i {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url("../images/search-home.png") no-repeat -40px -40px;
+  vertical-align: text-bottom;
+  margin-right: 5px;
+}
+.search .search-box .search-btn em {
+  font-size: 16px;
+  color: #fff;
+}
+
+/* 头部导航栏样式 */
+.nav-bar {
+  width: 100%;
+  height: 44px;
+  background-color: #ee3388;
+}
+.nav-box {
+  width: 1200px;
+  margin: 0 auto;
+  height: 44px;
+  line-height: 44px;
+}
+.nav-box ul {
+  height: 44px;
+}
+.nav-box ul li {
+  float: left;
+  height: 44px;
+}
+.nav-box ul li a {
+  color: #fff;
+  font-size: 16px;
+  display: inline-block;
+  height: 44px;
+  padding: 0 12px;
+  position: relative;
+}
+.nav-box ul .nav-menu {
+  position: relative;
+}
+.nav-box ul .nav-menu a {
+  padding: 0 18px 0 8px;
+}
+.nav-box ul .nav-menu .icon-arrow {
+  display: inline-block;
+  width: 10px;
+  height: 6px;
+  top: 19px;
+  right: 3px;
+  border: none;
+  background: url("../images/icons.png") no-repeat -130px -300px;
+}
+.down-nav {
+  display: none;
+  position: absolute;
+  height: 40px;
+  top: 44px;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+}
+.down-nav p {
+  position: absolute;
+  top: 0;
+  line-height: 40px;
+  font-size: 14px;
+  color: #666;
+  overflow: hidden;
+}
+.down-nav p a {
+  display: inline-block;
+  font-size: 14px !important;
+  color: #666 !important;
+  padding: 0 10px !important;
+  z-index: 9;
+}
+.down-nav p a:hover {
+  color: #ee3388 !important;
+}
+.down-nav span {
+  position: absolute;
+  top: -5px;
+  width: 11px;
+  height: 5px;
+  background: url("../images/icons.png") no-repeat -120px -135px;
+}
+.nav-box ul .hover_this .icon-arrow {
+  background-position: -130px -310px;
+}
+.nav-box ul .hover_this .down-nav {
+  display: block;
+  z-index: 9;
+}
+
+/* 轮播图样式 */
+.banner {
+  width: 100%;
+  position: relative;
+}
+.banner .banner-box {
+  width: 100%;
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+  z-index: 3;
+}
+.banner .banner-box li {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  transition: opacity 1s linear 0s;
+}
+.banner .banner-box li img {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.banner .banner-tap {
+  position: absolute;
+  left: 50%;
+  margin-left: 415px;
+  bottom: 30px;
+  height: 6px;
+  z-index: 6;
+}
+.banner .banner-tap li {
+  float: left;
+  margin-left: 11px;
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+.banner .banner-tap .active {
+  background-color: #ee3388;
+}
+.banner .banner-tab {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -600px;
+  transform: translateY(-50%);
+  width: 561px;
+  height: 360px;
+  z-index: 6;
+}
+.banner .banner-tab .tab {
+  width: 80px;
+  height: 100%;
+  background-color: rgba(60, 87, 105, 0.8);
+}
+.banner .banner-tab .tab li {
+  width: 76px;
+  height: 44px;
+  line-height: 44px;
+  border-bottom: 1px solid #4d6072;
+  padding-left: 4px;
+  overflow: hidden;
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.banner .banner-tab .tab li:last-child {
+  border-bottom: none;
+}
+.banner .banner-tab .tab li:hover {
+  background-color: #4d6072;
+}
+.banner .banner-tab .tab li.active {
+  border-left: 4px solid #ef3388;
+  height: 45px;
+  line-height: 45px;
+  border-bottom: none;
+  color: #ef3388;
+  padding-left: 0;
+  background: #fff;
+}
+.banner .banner-tab .tab-list {
+  width: 441px;
+  height: 320px;
+  padding: 20px;
+  background-color: #fff;
+}
+.list {
+  display: none;
+}
+.list .list-nav {
+  margin-top: -15px;
+  height: 38px;
+  line-height: 38px;
+  border-bottom: 2px solid #ddd;
+  color: #333;
+  font-size: 16px;
+}
+.list .list-nav li {
+  float: left;
+  height: 38px;
+  line-height: 38px;
+  padding: 0 12px;
+  margin-right: 20px;
+  cursor: pointer;
+  position: relative;
+}
+.list .list-nav li:hover {
+  color: #e38;
+}
+.list .list-nav .active {
+  font-weight: bold;
+  color: #e38;
+  border-bottom: 2px solid #e38;
+}
+.list .list-nav .active i {
+  display: block;
+  width: 11px;
+  height: 6px;
+  position: absolute;
+  left: 50%;
+  bottom: -2px;
+  margin-left: -5px;
+  background: url("../images/lv_search.png") no-repeat -340px 0;
+}
+.list .list-search {
+  margin-top: 20px;
+}
+.list .list-search li {
+  display: none;
+}
+.list .list-search .search-text {
+  padding: 6px 10px;
+  width: 419px;
+  height: 22px;
+  line-height: 22px;
+  border: 1px solid #ccc;
+  color: #bbb;
+  font-size: 14px;
+  outline: none;
+}
+.list .list-search .search-text:focus {
+  border-color: #b5d2e9;
+  box-shadow: 0px 0px 2px #b5d2e9;
+}
+.list .list-btn {
+  height: 36px;
+  line-height: 36px;
+  margin: 10px 0;
+}
+.list .list-btn .search-btn {
+  display: block;
+  float: right;
+  width: 87px;
+  height: 36px;
+  margin-right: 1px;
+  font-size: 14px;
+  color: #fff;
+  text-align: center;
+  background: #ee3388;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.list .list-hot {
+  width: 441px;
+  height: 48px;
+  padding: 15px 0 0 62px;
+  border-top: 1px dotted #ddd;
+  box-sizing: border-box;
+  position: relative;
+}
+.list .list-hot dt {
+  display: inline-block;
+  width: 62px;
+  position: absolute;
+  left: 0;
+  top: 15px;
+}
+.list .list-hot dd {
+  margin-left: -9px;
+  overflow: hidden;
+}
+.list .list-hot dd a {
+  display: inline-block;
+  margin: 5px 0 7px -1px;
+  padding: 0 9px;
+  height: 12px;
+  line-height: 12px;
+  color: #666;
+  border-left: 1px solid #ccc;
+  vertical-align: top;
+}
+.list .list-hot dd a:hover {
+  color: #f60;
+}
+.list .list-hot .hot {
+  color: #f39;
+}
+
+/* 秒杀区 */
+.seckill {
+  width: 100%;
+  height: 320px;
+}
+.seckill .seckill-box {
+  width: 1200px;
+  margin: 0 auto;
+  height: 100%;
+  margin-top: 25px;
+}
+.seckill-top {
+  width: 100%;
+  height: 40px;
+  border-bottom: 2px solid #ddd;
+  position: relative;
+}
+.seckill-top .seckill-tab {
+  height: 40px;
+  line-height: 40px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.seckill-top .seckill-tab li {
+  float: left;
+  font-size: 20px;
+  margin-right: 30px;
+  padding: 0 3px;
+  border-bottom: 2px solid #ddd;
+  color: #666;
+  position: relative;
+  cursor: pointer;
+}
+.seckill-top .seckill-tab .active {
+  color: #e38;
+  border-bottom-color: #e38;
+}
+.seckill-top .seckill-tab .active i {
+  display: inline-block;
+  width: 11px;
+  height: 6px;
+  position: absolute;
+  left: 50%;
+  bottom: -2px;
+  margin-left: -5px;
+  background: url("../images/lv_search.png") no-repeat -340px 0;
+}
+.seckill-top .seckill-ad {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 120px;
+  height: 30px;
+}
+.seckill-bottom {
+  height: 260px;
+  margin-left: 0;
+}
+.seckill-bottom ul {
+  width: 1220px;
+  height: 260px;
+}
+.seckill-bottom ul li {
+  float: left;
+  width: 222px;
+  height: 258px;
+  margin-right: 20px;
+  border: 1px solid #ddd;
+}
+.seckill-bottom ul li a {
+  display: block;
+  padding-top: 150px;
+  position: relative;
+}
+.seckill-bottom ul li a img {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.seckill-info .title {
+  margin: 7px 0;
+  padding: 0 10px;
+  font-size: 14px;
+  height: 36px;
+  line-height: 18px;
+  color: #333;
+  overflow: hidden;
+}
+.seckill-info .title .title-tag {
+  color: #390;
+}
+.seckill-info .title .title-tag .title-tag-line {
+  position: relative;
+  top: -1px;
+  padding: 0 3px;
+  color: #bbb;
+}
+.seckill-info .price {
+  margin-top: 2px;
+  padding: 9px 10px 0;
+  line-height: 20px;
+  color: #999;
+  border-top: 1px dotted #ccc;
+  position: relative;
+}
+.seckill-info .price dfn {
+  padding-right: 3px;
+  color: #f60;
+  font-size: 20px;
+  font-weight: bold;
+}
+.seckill-info .price dfn i {
+  font-size: 18px;
+}
+.seckill-info .price .buy-btn {
+  display: inline-block;
+  position: absolute;
+  right: 10px;
+  top: 14px;
+  width: 75px;
+  height: 30px;
+  line-height: 30px;
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+  background-color: #f80;
+  border-radius: 2px;
+}
+.seckill-bottom ul li:hover {
+  border: none;
+  margin: 1px 21px 1px 1px;
+  box-shadow: 0 0 10px #666;
+}
+.seckill-bottom ul li:hover .title {
+  color: #f60;
+}
+
+.section {
+  width: 100%;
+  margin-top: 25px;
+}
+.section .section-box {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.section7 {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+/* 楼层菜单 */
+.nav-left {
+  display: none;
+  position: fixed;
+  left: 50%;
+  margin-left: -650px;
+  top: 70px;
+  width: 36px;
+}
+.nav-left li {
+  width: 24px;
+  height: 34px;
+  line-height: 34px;
+  padding: 0 6px;
+  color: #999;
+  text-align: center;
+  cursor: pointer;
+}
+.nav-left li h3 {
+  border-bottom: 1px solid #eee;
+}
+.nav-left .active {
+  background: #ff4499;
+  color: #fff;
+}
+
+/* 页尾区 */
+.footer {
+  width: 100%;
+  text-align: center;
+}
+.footer .footer-top {
+  width: 100%;
+  background: #d37;
+}
+.footer .footer-middle {
+  width: 100%;
+  background: #2f3f4f;
+}
+.footer .footer-bottom {
+  width: 100%;
+}
